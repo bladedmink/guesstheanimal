@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Guess The Animal</title>
+
+    <environment names="Development, Staging, Production">
+        <script src="~/js/jquery.min.js"></script>
+        <script src="~/js/angular.min.js"></script>
+    </environment>
+
+    <environment names="Development, Staging, Production">
+        <link asp-href-include="~/css/vendor/*.css" rel="stylesheet" />
+        <link asp-href-include="~/css/*.css" rel="stylesheet" />
+    </environment>
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Guess The Animal</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>David De Carlo &copy; 2017 - Guess The Animal</p>
+        </footer>
+    </div>
+
+    <environment names="Development, Staging, Production">
+        <script src="~/js/bootstrap.min.js"></script>
+        <script src="~/js/angular-animate.min.js"></script>
+        <script src="~/js/angular-local-storage.min.js"></script>
+        <script src="~/js/ui-bootstrap-tpls.min.js"></script>
+        <script src="~/js/angular-ui-router.min.js"></script>
+        <script src="~/js/loading-bar.min.js"></script>
+        <script src="~/js/angular-ui-notification.min.js"></script>
+    </environment>
+
+
+    @RenderSection("Scripts", false)
+</body>
+</html>
